@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Estudiantil UCACUE - Soporte de TI Inteligente</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="background_video.mp4" type="video/mp4">
+    </video>
+    <div class="app-container">
+        <!-- Panel Principal: Portal de la Universidad -->
+        <main class="portal-main">
+            <!-- Header del Portal -->
+            <header class="portal-header">
+                <div class="header-logo">
+                    <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                    <div>
+                        <h1>UNIVERSIDAD CATÓLICA DE CUENCA</h1>
+                        <span class="sub-logo">Portal Estudiantil de Servicios de TI</span>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">Josué Robles</span>
+                        <span class="user-career">Robótica e Inteligencia Artificial - Paralelo C</span>
+                    </div>
+                    <div class="user-avatar">JR</div>
+                </div>
+            </header>
+
+            <!-- Grid de Servicios del Estudiante -->
+            <section class="portal-dashboard">
+                <div class="welcome-banner">
+                    <h2>¡Bienvenido al ciclo académico 2026!</h2>
+                    <p>Aquí tienes acceso a tus plataformas académicas, servicios de red y asistencia técnica en línea.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Plataforma E-Virtual</h3>
+                        <p>Accede a tus aulas virtuales, sílabos y tareas asignadas.</p>
+                        <a href="#" class="card-btn">Ingresar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <h3>Correo Institucional</h3>
+                        <p>Revisa tu buzón de correo académico y notificaciones oficiales.</p>
+                        <a href="#" class="card-btn">Ingresar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fa-solid fa-wifi"></i></div>
+                        <h3>Red Eduroam Wi-Fi</h3>
+                        <p>Configura y gestiona tus dispositivos en la red del campus.</p>
+                        <a href="#" class="card-btn">Ver Guía <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Seguridad de Cuenta</h3>
+                        <p>Cambia tu contraseña institucional y configura tu doble factor.</p>
+                        <a href="#" class="card-btn">Administrar <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portal-info-section">
+                    <div class="info-box">
+                        <h3><i class="fa-solid fa-circle-info"></i> Estado de los Servicios de TI</h3>
+                        <ul class="status-list">
+                            <li><span class="status-dot green"></span> Portal Académico: <strong>Operativo</strong></li>
+                            <li><span class="status-dot green"></span> Aula E-Virtual: <strong>Operativo</strong></li>
+                            <li><span class="status-dot yellow"></span> Wi-Fi Bloque B: <strong>Inestabilidad Reportada</strong></li>
+                            <li><span class="status-dot green"></span> Correo Office 365: <strong>Operativo</strong></li>
+                        </ul>
+                    </div>
+                    <div class="info-box instructions-box">
+                        <h3><i class="fa-solid fa-robot"></i> ¿Cómo usar este Prototipo?</h3>
+                        <p>Este sistema simula la integración de un **Asistente Inteligente de Soporte (Mesa de Ayuda)**.</p>
+                        <ol>
+                            <li>Haz clic en el icono flotante de chat en la esquina inferior derecha para abrir el Chatbot.</li>
+                            <li>Prueba escribiendo mensajes como:
+                                <ul>
+                                    <li>"No me puedo conectar al Wi-Fi"</li>
+                                    <li>"Olvidé mi contraseña de E-Virtual"</li>
+                                    <li>"Se dañó un proyector en el Bloque B" (para ver el escalamiento automático)</li>
+                                </ul>
+                            </li>
+                            <li>Observa la <strong>Consola de IA</strong> en el panel de la derecha para ver cómo la IA analiza tu intención.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Panel Lateral Derecha: Consola de Diagnóstico e IA -->
+        <aside class="ai-diagnostics-panel">
+            <div class="panel-header">
+                <h2><i class="fa-solid fa-brain"></i> Consola de Diagnóstico IA</h2>
+                <span class="badge">Robótica & IA</span>
+            </div>
+            
+            <div class="panel-body">
+                <div class="metric-group">
+                    <span class="metric-label">Intención Detectada:</span>
+                    <span id="ai-intent" class="metric-value">Esperando consulta...</span>
+                </div>
+                
+                <div class="metric-group">
+                    <span class="metric-label">Confianza de IA:</span>
+                    <span id="ai-confidence" class="metric-value">-</span>
+                </div>
+
+                <div class="metric-group">
+                    <span class="metric-label">Variables Extraídas (Slots):</span>
+                    <pre id="ai-slots" class="json-viewer">{}</pre>
+                </div>
+
+                <div class="metric-group">
+                    <span class="metric-label">Nodo de Decisión Actual:</span>
+                    <span id="ai-node" class="metric-value badge-node">INICIO</span>
+                </div>
+
+                <div class="metric-group ticket-section" id="ai-ticket-group" style="display: none;">
+                    <span class="metric-label alert-label"><i class="fa-solid fa-ticket"></i> Ticket de TI Generado (JSON):</span>
+                    <pre id="ai-ticket-json" class="json-viewer json-ticket"></pre>
+                    <div class="ticket-status">
+                        <span class="badge badge-escalado"><i class="fa-solid fa-share-nodes"></i> Escalado a Nivel 2</span>
+                        <span class="badge badge-priority" id="ticket-priority-badge">Prioridad: Media</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <span>Desarrollado por Josué Robles &copy; 2026</span>
+            </div>
+        </aside>
+
+        <!-- Widget de Chat Flotante -->
+        <div class="chat-widget" id="chat-widget">
+            <div class="floating-bubble" id="floating-bubble">TIENES UN PROBLEMA</div>
+            <!-- Botón de apertura -->
+            <button class="chat-trigger" id="chat-trigger" aria-label="Abrir asistente de soporte">
+                <i class="fa-solid fa-comments"></i>
+                <span class="badge-notify">1</span>
+            </button>
+
+            <!-- Ventana de Chat -->
+            <div class="chat-window" id="chat-window">
+                <div class="chat-header">
+                    <div class="chat-bot-profile">
+                        <div class="bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                        <div>
+                            <h3>UcaBot</h3>
+                            <span class="bot-status"><span class="pulse-dot"></span> Soporte Inteligente Activo</span>
+                        </div>
+                    </div>
+                    <button class="chat-close" id="chat-close" aria-label="Cerrar chat">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Los mensajes se cargarán dinámicamente desde app.js -->
+                </div>
+
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Escribe tu consulta aquí..." autocomplete="off">
+                    <button id="chat-send" aria-label="Enviar mensaje"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de lógica -->
+    <script src="app.js"></script>
+</body>
+</html>
